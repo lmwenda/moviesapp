@@ -1,23 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 
-function Product({ product }){
+function Movie({ movie }){
+    const IMG_API = "https://image.tmdb.org/t/p/w1280";
+
     return(
         <Card className="my-3 p-2 rounded">
-            <Link to={`/product/${product.id}`}>
-                <Card.Img src={product.image} />
+            <Link to={`/movie/${movie.id}`}>
+                <Card.Img src={IMG_API + movie.poster_path} />
             </Link>
 
             <Card.Body>
-            <Link to={`/product/${product.id}`}>
+            <Link to={`/movie/${movie.id}`}>
                 <Card.Title>
-                    <strong>{product.title}</strong>
+                    <strong>{movie.title}</strong>
                 </Card.Title>
             </Link>
 
             <Card.Text as="h3" style={{color: '#000', textDecoration: 'none'}}>
-                ${product.price}
+                
             </Card.Text>
 
             </Card.Body>
@@ -25,4 +28,4 @@ function Product({ product }){
     );
 }
 
-export default Product;
+export default Movie;
