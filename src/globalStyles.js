@@ -1,3 +1,4 @@
+import { createStyles } from "@mui/material";
 import { createGlobalStyle} from "styled-components"
 
 export const GlobalStyles = createGlobalStyle`

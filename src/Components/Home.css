@@ -1,3 +1,12 @@
 .theme{
     margin-left: 20.5vw;
 }
+
+#search{
+    padding: 7px;
+    border-radius: 4px;
+    width: 5rem;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
+}
